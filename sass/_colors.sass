@@ -1,0 +1,49 @@
+@each $key, $value in $colors
+  // text color
+  .text-#{$key}
+    color: $value
+  // bg color
+  .bg-#{$key}
+    background-color: $value
+  // text hover color
+  .text-hover-#{$key}
+    &:hover
+      color: $value
+  // bg hover color
+  .bg-hover-#{$key}
+    &:hover
+      background-color: $value
+  .border-#{$key}
+    border: 1px solid $value
+  // light variations from the color [ text & bg ]
+  @for $i from 1 through 9
+    .text-#{$key}-light-#{$i}
+      color: mix(#fff, $value, $i * 10)
+    .bg-#{$key}-light-#{$i}
+      background-color: mix(#fff, $value, $i * 10)
+  // dark variations from the color [ text, bg & border ]
+  @for $i from 1 through 9
+    .text-#{$key}-dark-#{$i}
+      color: mix(#000, $value, $i * 10)
+    .bg-#{$key}-dark-#{$i}
+      background-color: mix(#000, $value, $i * 10)
+    .border-#{$key}-light-#{$i}
+      border: 1px solid mix(#fff, $value, $i * 10)
+    .border-#{$key}-dark-#{$i}
+      border: 1px solid mix(#000, $value, $i * 10)
+  // light and dark variation with hover effect
+  @for $i from 1 through 9
+    // light
+    .text-#{$key}-light-hover-#{$i}
+      &:hover
+        color: mix(#fff, $value, $i * 10)
+    .bg-#{$key}-light-hover-#{$i}
+      &:hover
+        background-color: mix(#fff, $value, $i * 10)
+    // dark
+    .text-#{$key}-dark-hover-#{$i}
+      &:hover
+        color: mix(#000, $value, $i * 10)
+    .bg-#{$key}-dark-hover-#{$i}
+      &:hover
+        background-color: mix(#000, $value, $i * 10)

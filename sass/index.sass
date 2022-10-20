@@ -1,0 +1,538 @@
+// Variables
+@import "variables"
+
+// Base layout ( resets, grid, breakpoints ...)
+@import "base"
+
+// Colors
+@import "colors"
+
+// utilities (padding, margin, display, border-radius .....)
+@import "utilities"
+
+// custom style
+$title-decoration-color: #5093d6
+.page
+  .sidebar
+    width: 250px
+    box-shadow: 0 0 10px #ddd
+    > h3
+      margin-bottom: 50px
+      &::before
+        content: ""
+        background-color: #000
+        width: 80px
+        height: 2px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -20px
+      &::after
+        content: ""
+        background-color: #000
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -29px
+        border: 4px solid #fff
+    ul
+      li
+        a
+          transition: all .3s
+          &:hover
+            i
+              color: $primary
+          i
+            width: 25px
+          .tooltip
+            display: none
+        .active
+          background-color: #f2f2f2
+  .content
+    overflow: hidden
+    .head
+      .search
+        &::before
+          font-family: "Font Awesome 5 Free"
+          font-weight: 900
+          content: "\f002"
+          position: absolute
+          left: 10px
+          top: 50%
+          transform: translateY(-50%)
+          font-size: 14px
+          color: #888
+        input
+          border: 1px solid #ccc
+          transition: .3s
+          width: 160px
+          &:focus
+            width: 250px
+            &::placeholder
+              opacity: 0
+      .icons
+        .notifications
+        img
+          width: 32px
+    .wrapper
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr))
+      .welcome
+        overflow: hidden
+        .intro
+          border-bottom: 1px solid #ddd 
+          img
+            width: 170px
+        .info
+          > div
+            flex: 1
+      .quick-draft
+        form
+          textarea
+            resize: vertical
+            height: 150px
+            outline: none
+      .target
+        .yearly-targets
+          > div
+            .box
+              width: 80px
+              height: 80px
+            .progress
+              flex: 1
+              .progress-bar
+                height: 5px
+                .current-progress
+                  height: 5px
+                  .prog-tooltip
+                    left: calc(100% - 20px)
+                    bottom: calc(100% + 10px)
+                    padding: 3px 7px
+                    &::before
+                      content: ""
+                      position: absolute
+                      left: 50%
+                      transform: translateX(-50%)
+                      top: 100%
+                      border-width: 7px
+                      border-style: solid
+                      border-color: var(--arrow-color) transparent transparent transparent
+      .stats
+        .ticket-stats
+          display: grid
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+          gap: 20px
+          > div
+            i
+              font-size: 25px
+            p
+              font-size: 30px
+      .latest-news
+        .news
+          .the-news
+            grid-template-columns: 1fr 3fr
+            align-items: center
+            gap: 20px
+            &:not(:last-child)
+              border-bottom: 1px solid #cecece
+              margin-bottom: 20px
+      .latest-tasks
+        .tasks
+          .task
+            &:not(:last-child)
+              margin-bottom: 20px
+              border-bottom: 1px solid #cecece
+          .completed
+            > div
+              h3
+                text-decoration: line-through
+                color: #aaa
+              p
+                text-decoration: line-through
+                color: #aaa
+              span
+                pointer-events: none
+                cursor: no-drop
+                i
+                  color: #aaa
+      .latest-uploads
+        .uploads
+          .upload
+            &:not(:last-child)
+              border-bottom: 1px solid #cecece
+              margin-bottom: 20px
+            .file-info
+              flex: 1
+            > div
+              img
+                width: 30px
+      .latest-project
+        .projects
+          .project
+            .circle
+              width: 40px
+              height: 40px
+              border: 2px solid $primary
+              &::before
+                content: ""
+                position: absolute
+                top: 100%
+                height: 23px
+                width: 2px
+                background-color: $primary
+              .sub-circle
+                width: 32px
+                height: 32px
+              .completed
+                background-color: $primary
+              .in-progress
+                background-color: #adc5f8
+            &:last-child
+              .circle
+                &::before
+                  width: 0
+      .reminders
+        .my-reminders
+          .reminder
+            &:not(:last-child)
+              margin-bottom: 15px
+            .label
+              width: 50px
+              height: 50px
+              .label-circle
+                width: 20px
+                height: 20px
+            .blue-label
+              border-right: 2px solid $primary
+              .label-circle
+                background-color: $primary
+            .red-label
+              border-right: 2px solid $error
+              .label-circle
+                background-color: $error
+            .green-label
+              border-right: 2px solid $success
+              .label-circle
+                background-color: $success
+            .warning-label
+              border-right: 2px solid $warning
+              .label-circle
+                background-color: $warning
+      .posts
+        .my-posts
+          .post
+            .image
+              img
+                width: 50px
+          .post-body
+            border-block: 1px solid #eee
+      .social
+        .holder
+          .social-icon
+            .icon
+              width: 45px
+              height: 45px
+            .facebook
+              background-color: #3b5998
+            .twitter
+              background-color: #1DA1F2
+            .youtube
+              background-color: #f00
+            .linked-in
+              background-color: #0e76a8
+            .info
+              flex: 1
+      .site-control, .security
+        .control
+          .toggle
+            .switcher
+              width: 80px
+              height: 35px
+              > div
+                width: 30px
+                height: 28px
+                border-radius: 50%
+                top: 50%
+                transform: translateY(-50%)
+            .on
+              background-color: $primary
+              > div
+                right: 5px
+                background-color: #fff
+            .off
+              background-color: #ddd
+              > div
+                left: 5px
+                background-color: #8a8a8a
+        textarea
+          height: 200px
+          resize: vertical
+          &:focus
+            outline: none
+            border-color: $primary
+      .general-info
+        form
+          .email
+            .email-input
+              flex: 1
+      .social-info
+        .social-list
+          .social-item
+            .icon
+              width: 50px
+              text-align: center
+              border-right: 1px solid #ccc
+      .backup
+        .backup-list
+          form
+            border-bottom: 1px solid #eee
+        .backup-type
+          > div
+            flex: 1
+          .active
+            border-color: $primary
+            border-width: 2px
+            color: $primary
+            i
+              color: $primary
+            p
+              color: $primary
+              font-weight: 600
+    .projects-stats
+      table
+        border: 0
+        border-spacing: 0
+        border: 0.1px
+        thead
+          tr
+            th
+              padding: 10px
+              font-size: 16px
+        tbody
+          tr
+            td
+              padding: 15px
+              border: 1px solid #eee
+              font-size: 14px
+              text-align: left
+            .team
+              text-align: center
+              img
+                width: 35px
+                margin-left: -15px
+                border: 2px solid #fff
+            .status
+              .box
+                padding: 4px 8px
+                border-radius: 6px
+                font-weight: 600
+                font-size: 15px
+                width: fit-content
+              .pending
+                background-color: #FFC107
+                color: #000
+              .in-progress
+                background-color: #326dee
+                color: #fff
+              .completed
+                background-color: #4CAF50
+                color: #fff
+              .rejected
+                background-color: #d32752
+                color: #fff
+    .my-profile
+      .profile-info
+        grid-template-columns: 1fr 3fr
+        .profile-rank
+          border-right: 1px solid #eee
+          .profile-prog
+            height: 5px
+            width: 80%
+            margin: 15px auto
+            > div
+              top: 0
+              left: 0
+              height: 100%
+          img
+            width: 150px
+        .info
+          .row
+            .row-info
+              grid-template-columns: repeat(3, 250px)
+              &:not(:last-child)
+                border-bottom: 1px solid #eee
+      .others
+        .skills
+          .my-skills
+            border-bottom: 1px solid #eee
+        .activities
+          .activity
+            &:not(:last-child)
+              border-bottom: 1px solid #eee
+            img
+              width: 60px
+    .projects
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+      .project
+        .project-team
+          border-bottom: 1px solid #ccc
+          img
+            width: 35px
+            &:not(:first-child)
+              margin-left: -10px
+        .responsibilities
+          border-bottom: 1px solid #eee
+        .project-prog
+          .prog
+            height: 5px
+            .curr-prog
+              width: 23%
+              top: 0
+              left: 0
+              height: 100%
+            .finished
+              width: 100%
+            .almost-finished
+              width: 74%
+    .courses
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+      .course
+        .head
+          .user
+            top: 15px
+            left: 15px
+            img
+              border: 2px solid #fff
+              width: 40px
+        .body
+          border-bottom: 1px solid #eee
+    .friends
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+      .friend
+        .head
+          .options
+            top: 0px
+            left: 0px
+            > div
+              width: 35px
+              height: 35px
+          .friend-info
+            border-bottom: 1px solid #eee
+            img
+              width: 100px
+        .body
+          border-bottom: 1px solid #eee
+          > div
+            i
+              width: 25px
+              text-align: left
+    .files
+      grid-template-columns: 1fr
+    .plans
+      .plan
+        .plan-title
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px $success
+        .plan-features
+          .plan-feature
+            border-bottom: 1px solid #eee
+            padding: 15px 0
+      .basic
+        .plan-title
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px $primary
+      .premium
+        .plan-title
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px $error
+@media (min-width: 768px)
+  .page
+    .content
+      .files
+        grid-template-columns: 3fr 1fr
+        align-items: flex-start
+        .the-files
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+          .file
+            .download
+              top: 10px
+              left: 10px
+            .head
+              border-bottom: 1px solid #eee
+              img
+                width: 70px
+        .file-stats
+          .files-size
+            img
+              width: 40px
+@media (max-width: 1140px)
+  .page
+    .content
+      .plans
+        flex-direction: column
+.page
+  .main-title
+    &::before
+      content: ""
+      position: absolute
+      height: 3px
+      bottom: -10px
+      left: 0
+      width: 120px
+      background-color: #fff
+    &::after
+      content: ""
+      position: absolute
+      height: 3px
+      bottom: -10px
+      left: 0
+      width: 45px
+      background-color: $title-decoration-color
+@media (max-width: 767px)
+  .page
+    .sidebar
+      width: 60px
+      padding: 10px 
+      > h3
+        font-size: 8px
+        margin-bottom: 15px
+        &::before
+          display: none
+        &::after
+          display: none
+      ul
+        li
+          a
+            span
+              display: none
+            &:hover
+              .tooltip
+                display: block
+            .tooltip
+              display: none
+              position: absolute
+              top: 50%
+              transform: translateY(-50%)
+              left: calc(100% + 20px)
+              padding: 10px 20px
+              border-radius: 6px
+              background-color: $primary
+              z-index: 10
+              color: #fff
+              font-weight: 600
+              box-shadow: 1px 1px 10px #aaa
+              &::before
+                content: ""
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                border-width: 7px
+                border-style: solid
+                left: -14px
+                border-color: transparent $primary transparent transparent 
+    .content
+      .wrapper
+        grid-template-columns: minmax(200px, 1fr)
+        .welcome
+          .info
+            display: block
+

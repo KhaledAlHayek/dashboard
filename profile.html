@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <div class="page d-flex">
+    <div class="sidebar bg-white p-relative p-20">
+      <h3 class="p-relative text-center mt-0">Dashboard</h3>
+      <ul>
+        <li>
+          <a href="index.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="far fa-chart-bar fa-fw text-center"></i>
+            <span class="ml-10">Dashboard</span>
+            <div class="tooltip">Dashboard</div>
+          </a>
+        </li>
+        <li>
+          <a href="settings.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="fas fa-cog text-center"></i>
+            <span class="ml-10">Settings</span>
+            <div class="tooltip">Settings</div>
+          </a>
+        </li> 
+        <li>
+          <a href="profile.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="far fa-user fa-fw text-center"></i>
+            <span class="ml-10">Profile</span>
+            <div class="tooltip">Profile</div>
+          </a>
+        </li>
+        <li>
+          <a href="projects.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="fas fa-project-diagram text-center"></i>
+            <span class="ml-10">Projects</span>
+            <div class="tooltip">Projects</div>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="fas fa-graduation-cap text-center"></i>
+            <span class="ml-10">Courses</span>
+            <div class="tooltip">Courses</div>
+          </a>
+        </li>
+        <li>
+          <a href="friends.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="fas fa-user-friends text-center"></i>
+            <span class="ml-10">Friends</span>
+            <div class="tooltip">Friends</div>
+          </a>
+        </li>
+        <li>
+          <a href="files.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="far fa-file text-center"></i>
+            <span class="ml-10">Files</span>
+            <div class="tooltip">Files</div>
+          </a>
+        </li>
+        <li>
+          <a href="plans.html" class="d-flex text-black align-center p-10 rad-6 fs-14 mb-5 bg-gray-light-hover-9 p-relative">
+            <i class="fas fa-money-check-alt text-center"></i>
+            <span class="ml-10">Plans</span>
+            <div class="tooltip">Plans</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="content w-100">
+      <!-- content head -->
+      <div class="head bg-white p-15 d-flex align-center justify-space-between">
+        <div class="search p-relative">
+          <input type="search" placeholder="Type a keyword..." class="p-10 pl-30 rad-10">
+        </div>
+        <div class="icons d-flex align-center">
+          <span class="p-relative notifications">
+            <i class="fas fa-bell fa-lg"></i>
+          </span>
+          <img src="imgs/avatar.png" alt="profile picture" class="ml-10">
+        </div>
+      </div>
+      <h1 class="p-relative main-title m-20 mb-30">Profile</h1>
+      <!-- My Profile -->
+      <div class="my-profile p-20">
+        <!-- Info -->
+        <div class="profile-info bg-white p-20 rad-10 d-grid align-center">
+          <div class="profile-rank d-flex flex-dir-col text-center">
+            <div class="img">
+              <img src="imgs/avatar.png" alt="profile picture">
+            </div>
+            <div class="name">
+              <h3 class="m-0 mt-10">Khaled Ali Hayek</h3>
+            </div>
+            <div class="level">
+              <h3 class="m-0 mt-10 fs-16 fw-500 text-gray-dark-2">Level 25</h3>
+            </div>
+            <div class="profile-prog bg-primary-light-7 p-relative rad-10 overflow-hidden">
+              <div class="profile-curr-prog w-75 bg-primary p-absolute"></div>
+            </div>
+            <div class="stars">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+            </div>
+            <div class="rating text-gray-dark-4 fs-15 mt-5">550 Rating</div>
+          </div>
+          <div class="info">
+            <div class="row pl-20">
+              <h3 class="mt-0 text-gray-dark-4 fw-500 fs-16">General Information</h3>
+              <div class="row-info d-grid pb-15 mb-20">
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Fullname: <strong class="text-gray-dark-7 fw-600">Khaled Ali Hayek</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Gender: <strong class="text-gray-dark-7 fw-600">Male</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Country: <strong class="text-gray-dark-7 fw-600">Egypt</strong></span>
+                </div>
+              </div>
+            </div>
+            <div class="row pl-20">
+              <h3 class="mt-0 text-gray-dark-4 fw-500 fs-16">Personal Information</h3>
+              <div class="row-info d-grid pb-15 mb-20">
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Email: <strong class="text-gray-dark-7 fw-600">khaledhyk.123@gmail.com</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Phone: <strong class="text-gray-dark-7 fw-600">0096170213460</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Date Of Birth: <strong class="text-gray-dark-7 fw-600">02/06/2000</strong></span>
+                </div>
+              </div>
+            </div>
+            <div class="row pl-20">
+              <h3 class="mt-0 text-gray-dark-4 fw-500 fs-16">Job Information</h3>
+              <div class="row-info gap-15 d-grid pb-15 mb-20">
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Title: <strong class="text-gray-dark-7 fw-600">Full Stack Web Developer</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Programming Language: <strong class="text-gray-dark-7 fw-600">PHP</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Years Of Experience: <strong class="text-gray-dark-7 fw-600">+ 2 years</strong></span>
+                </div>
+              </div>
+            </div>
+            <div class="row pl-20">
+              <h3 class="mt-0 text-gray-dark-4 fw-500 fs-16">Billing Information</h3>
+              <div class="row-info d-grid">
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Payment Method: <strong class="text-gray-dark-7 fw-600">Paypal</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Email: <strong class="text-gray-dark-7 fw-600">khaledhyk.123@gmail.com</strong></span>
+                </div>
+                <div>
+                  <span class="text-gray-dark-1 fs-14">Subscription: <strong class="text-gray-dark-7 fw-600">Monthly</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skills & Activities -->
+        <div class="others d-flex mt-20 mb-20 gap-15">
+          <div class="skills flex-1 bg-white rad-10 p-20">
+            <h3 class="m-0">My Skills</h3>
+            <p class="text-gray-dark-4">Computer Skills List</p>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">HTML</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">PugJS</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">HAML</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">CSS</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">SASS</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Styls</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Javascript</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Typescript</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">VueJS</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">ReactJS</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Jest</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Jasmine</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">PHP</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Laravel</div>
+            </div>
+            <div class="my-skills pt-15 pb-15 d-flex gap-5">
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Python</div>
+              <div class="bg-gray-light-8 pl-10 pr-10 pt-5 pb-5 rad-6 fs-14">Django</div>
+            </div>
+          </div>
+          <div class="activities flex-3 bg-white rad-10 p-20">
+            <h3 class="m-0">Lastest Activities</h3>
+            <p class="text-gray-dark-4">Latest activities done by the user</p>
+            <div class="activity mb-20 pb-15 d-flex align-center justify-space-between">
+              <div class="act-info d-flex align-center gap-10">
+                <img src="imgs/activity-01.png" alt="activity">
+                <div class="info fs-14">
+                  <h4 class="m-0">Store</h4>
+                  <p class="m-0 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="act-date text-right">
+                <span class="d-block fw-500 fs-14 mb-5">18:10</span>
+                <span class="d-block fs-14 text-gray-dark-3">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity mb-20 pb-15 d-flex align-center justify-space-between">
+              <div class="act-info d-flex align-center gap-10">
+                <img src="imgs/activity-02.png" alt="activity">
+                <div class="info fs-14">
+                  <h4 class="m-0">Academy</h4>
+                  <p class="m-0 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="act-date text-right">
+                <span class="d-block fw-500 fs-14 mb-5">18:10</span>
+                <span class="d-block fs-14 text-gray-dark-3">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity mb-20 pb-15 d-flex align-center justify-space-between">
+              <div class="act-info d-flex align-center gap-10">
+                <img src="imgs/activity-03.png" alt="activity">
+                <div class="info fs-14">
+                  <h4 class="m-0">Badge</h4>
+                  <p class="m-0 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="act-date text-right">
+                <span class="d-block fw-500 fs-14 mb-5">18:10</span>
+                <span class="d-block fs-14 text-gray-dark-3">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity mb-20 pb-15 d-flex align-center justify-space-between">
+              <div class="act-info d-flex align-center gap-10">
+                <img src="imgs/activity-02.png" alt="activity">
+                <div class="info fs-14">
+                  <h4 class="m-0">Store</h4>
+                  <p class="m-0 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="act-date text-right">
+                <span class="d-block fw-500 fs-14 mb-5">18:10</span>
+                <span class="d-block fs-14 text-gray-dark-3">Yesterday</span>
+              </div>
+            </div>
+            <div class="activity mb-20 pb-15 d-flex align-center justify-space-between">
+              <div class="act-info d-flex align-center gap-10">
+                <img src="imgs/activity-03.png" alt="activity">
+                <div class="info fs-14">
+                  <h4 class="m-0">Store</h4>
+                  <p class="m-0 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="act-date text-right">
+                <span class="d-block fw-500 fs-14 mb-5">18:10</span>
+                <span class="d-block fs-14 text-gray-dark-3">Yesterday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

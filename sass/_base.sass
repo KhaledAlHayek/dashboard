@@ -1,0 +1,35 @@
+body
+  font-family: "Open Sans", sans-serif
+  margin: 0
+  padding: 0
+  &::-webkit-scrollbar
+    width: 8px
+  &::-webkit-scrollbar-track
+    background-color: #fff
+  &::-webkit-scrollbar-thumb
+    background-color: $primary
+    border-radius: 10px
+    &:hover
+      background-color: $info
+*, *::before, *::after
+  box-sizing: border-box
+
+ul
+  padding-left: 0
+  list-style: none
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+
+input, button, input::placeholder, textarea, textarea::placeholder
+  font-family: "Open Sans", sans-serif
+  outline: none
+  &:focus
+    outline: none
+
+.page
+  min-height: 100vh
+  background-color: #f1f5f9
